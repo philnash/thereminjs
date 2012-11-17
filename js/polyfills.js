@@ -1,4 +1,4 @@
-`/**
+/**
  * @namespace Allows access to webRTC and other features for browsers that are
  * not conforming to the latest standard (yet). Supported Browsers are:
  * Chrome, Opera and Firefox (soon).
