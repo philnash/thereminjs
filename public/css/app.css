@@ -15,6 +15,8 @@ a{
   text-decoration: none;
   border-bottom: 1px dotted #b8b8b8;
   -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 a:hover, a:focus{
   border-bottom: 1px solid #e8e8e8;
@@ -23,11 +25,26 @@ a:hover, a:focus{
 
 header h1{
   color:#fff;
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00aaff, 0 0 70px #ff00de, 0 0 80px #00aaff, 0 0 100px #00aaff, 0 0 150px #00aaff;
+  text-shadow: 0 0 10px #e8e8e8, 0 0 20px #e8e8e8, 0 0 30px #e8e8e8, 0 0 40px #00aaff, 0 0 70px #ff00de, 0 0 80px #00aaff, 0 0 100px #00aaff, 0 0 150px #00aaff;
   font-family: "Arial Rounded MT Bold";
   font-size:9.6em;
   padding:0.5em 0;
   text-align: center;
+}
+
+#main{
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+#main p{
+  font-size:1.6em;
+  margin-bottom:0.5em;
+}
+
+#main video{
+  margin:0 auto;
+  display: block;
 }
 
 footer{
