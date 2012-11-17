@@ -4,7 +4,7 @@ var Theremin = {
 Theremin.startVideo = function(){
     navigator.webkitGetUserMedia({video:true}, function(stream){
     var video = document.getElementsByTagName('video')[0],
-        square = $('#hand'),
+        square = $('#hand').show(),
         tick =  function(){
                   $(video).objectdetect('all', {classifier: objectdetect.face}, function(coords){
                     if(coords[0]){
@@ -28,7 +28,6 @@ Theremin.startVideo = function(){
 }
 
 Theremin.start = function(e){
-  console.log('start');
   e.preventDefault();
   if(!Theremin.context){
     Theremin.context = new webkitAudioContext();
@@ -50,7 +49,6 @@ Theremin.start = function(e){
 }
 
 Theremin.stop = function(e){
-  console.log('stop');
   e.preventDefault();
   Theremin.oscillator.noteOff(0);
   delete Theremin.oscillator;
@@ -62,5 +60,9 @@ Theremin.stop = function(e){
 
 window.addEventListener('load', function(){
   Theremin.startButton = document.getElementById('start');
-  Theremin.startButton.addEventListener('click', Theremin.start, false);
+  if(!!navigator.webkitGetUserMedia && !!window.webkitAudioContext){
+    Theremin.startButton.addEventListener('click', Theremin.start, false);
+  }else{
+    Theremin.startButton.parentNode.innerHTML = "Your browser does not support either getUserMedia or audioContext. This was developed in Chrome and probably only works there.";
+  }
 }, false);
