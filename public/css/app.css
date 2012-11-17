@@ -60,6 +60,7 @@ header h1{
 #main{
   max-width: 960px;
   margin: 0 auto;
+  position: relative;
 }
 
 #main p{
@@ -71,6 +72,7 @@ header h1{
 #main video{
   margin:0 auto;
   display: block;
+  margin-bottom:4em;
 }
 
 #wrapper{
@@ -91,13 +93,14 @@ header h1{
 
 footer{
   position: absolute;
-  bottom: 0;
+  top: 300px;
   left: 0;
-  right: 0;
-  height: 4em;
+  width: 150px;
+  text-align: left;
+  line-height: 1.5;
 }
 
-footer p{
-  text-align: center;
+#main footer p{
+  text-align: left;
   font-size: 1.6em;
 }
